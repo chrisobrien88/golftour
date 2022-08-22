@@ -5,13 +5,16 @@ import {
   Flex,
   ChakraProvider,
   VStack,
+  Box
 } from '@chakra-ui/react';
+
+import './components/button-stylesheet.scss'
 
 // Import Data
 import { teamEurope, teamUSA } from './players'
 
 // Import Components
-import { PlayerCard } from './components/PlayerCard';
+import { PlayerCard } from './components/PlayerCard/PlayerCard.js';
 
 // Import Images
 import teamEuropePic from './images/europe.png'
@@ -30,7 +33,7 @@ export const App = () => {
 
   return (
     <ChakraProvider>
-      <VStack bg='gray.50'>
+      <VStack h='100vh'>
         {/* <Image src={teamEuropePic} alt={teamEuropePic} position='absolute' maxH='100px'/> */}
         <VStack justifyContent='center' maxW='1200px'>
 
@@ -40,6 +43,7 @@ export const App = () => {
               <Button onClick={showTeamEurope} >Team Europe</Button>
               <Button onClick={showTeamUSA} >Team USA </Button>
             </ButtonGroup>
+            
           </Flex>
           <Flex mx={12} maxW='1200px' wrap='wrap' gap={4} justifyContent='center'>
             {team.map(player => (<PlayerCard

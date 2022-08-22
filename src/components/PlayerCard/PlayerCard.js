@@ -11,13 +11,23 @@ import {
     AccordionPanel,
     AccordionIcon,
     Button,
-} from '@chakra-ui/react'
+} from '@chakra-ui/react';
 
-import { Label } from './Label'
+import './PlayerCard.scss'
+
+import { Label } from '../Label'
 
 export const PlayerCard = (props) => {
     return (
-        <Box bg='white' h='auto' w='240px' p={3} borderRadius={8} border={props.border} boxShadow='md'>
+        <Box 
+        // bg='white' 
+        h='auto' 
+        w='240px' 
+        p={3} 
+        // borderRadius={8} 
+        // border={props.border} 
+        // boxShadow='md' 
+        className='player-card'>
             <VStack w='full'>
 
                 <HStack justifyContent='left' w='full'>
