@@ -1,42 +1,64 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
+  ButtonGroup,
+  Button,
+  Flex,
   ChakraProvider,
-  Box,
-  Text,
-  Link,
   VStack,
-  Code,
-  Grid,
-  theme,
 } from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
 
-function App() {
+// Import Data
+import { teamEurope, teamUSA } from './players'
+
+// Import Components
+import { PlayerCard } from './components/PlayerCard';
+
+// Import Images
+import teamEuropePic from './images/europe.png'
+import teamUSAPic from './images/usa.png'
+
+export const App = () => {
+  const [team, setTeam] = useState(teamEurope)
+
+  const showTeamUSA = () => {
+    setTeam(teamUSA)
+  };
+
+  const showTeamEurope = () => {
+    setTeam(teamEurope)
+  };
+
   return (
-    <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakra
-            </Link>
-          </VStack>
-        </Grid>
-      </Box>
+    <ChakraProvider>
+      <VStack bg='gray.50'>
+        {/* <Image src={teamEuropePic} alt={teamEuropePic} position='absolute' maxH='100px'/> */}
+        <VStack justifyContent='center' maxW='1200px'>
+
+          <Flex alignItems='center' justifyContent='center' h={24} w='full'>
+
+            <ButtonGroup>
+              <Button onClick={showTeamEurope} >Team Europe</Button>
+              <Button onClick={showTeamUSA} >Team USA </Button>
+            </ButtonGroup>
+          </Flex>
+          <Flex mx={12} maxW='1200px' wrap='wrap' gap={4} justifyContent='center'>
+            {team.map(player => (<PlayerCard
+              key={player}
+              firstName={player.firstName}
+              lastName={player.lastName}
+              nickname={player.nickname}
+              team={player.team}
+              playerBio={player.playerBio}
+              handicap={player.handicap}
+              src={player.profilePic}
+              border={teamEurope ? '1px solid lightblue' : '1px solid tomato'}
+            />))}
+          </Flex>
+        </VStack>
+      </VStack>
     </ChakraProvider>
-  );
+  )
+
 }
 
 export default App;
