@@ -5,7 +5,7 @@ import {
   Flex,
   ChakraProvider,
   VStack,
-  Box
+  HStack,
 } from '@chakra-ui/react';
 
 import './components/button-stylesheet.scss'
@@ -39,11 +39,14 @@ export const App = () => {
 
           <Flex alignItems='center' justifyContent='center' h={24} w='full'>
 
-            <ButtonGroup>
+            {/* <ButtonGroup>
               <Button onClick={showTeamEurope} >Team Europe</Button>
               <Button onClick={showTeamUSA} >Team USA </Button>
-            </ButtonGroup>
-            
+            </ButtonGroup> */}
+            <HStack spacing={4}>
+            <button className='button button2' onClick={showTeamEurope}>Team Europe</button>
+            <button className='button button2' onClick={showTeamUSA}>Team USA</button>
+            </HStack>
           </Flex>
           <Flex mx={12} maxW='1200px' wrap='wrap' gap={4} justifyContent='center'>
             {team.map(player => (<PlayerCard
@@ -55,7 +58,7 @@ export const App = () => {
               playerBio={player.playerBio}
               handicap={player.handicap}
               src={player.profilePic}
-              border={teamEurope ? '1px solid lightblue' : '1px solid tomato'}
+              variant={team === 'teamEurope' ? 'teamEurope' : 'teamUSA'}
             />))}
           </Flex>
         </VStack>
