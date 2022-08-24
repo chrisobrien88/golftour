@@ -58,7 +58,6 @@ export const App = () => {
               playerBio={player.playerBio}
               handicap={player.handicap}
               src={player.profilePic}
-              variant={team === 'teamEurope' ? 'teamEurope' : 'teamUSA'}
             />))}
           </Flex>
         </VStack>
