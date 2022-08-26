@@ -3,8 +3,6 @@ import { Logo } from './Logo';
 import { MenuToggle } from './MenuToggle';
 import { MenuLinks } from './MenuLinks';
 import { NavBarContainer } from './NavBarContainer';
-import { Button } from '@chakra-ui/react';
-
 
 export const NavBar = (props) => {
     const [isOpen, setIsOpen] = React.useState(false)

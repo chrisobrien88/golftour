@@ -1,12 +1,14 @@
 import React from 'react';
-import { Box, Text, Link, Stack } from "@chakra-ui/react"
+import { Box, Text, Stack, Button } from "@chakra-ui/react";
+import { Link } from 'react-router-dom';
+import { FcGoogle } from "react-icons/fc";
 
 const MenuItem = ({ children, isLast, to = "/", ...rest }) => {
 
     const menuItemProps = {color: 'black', fontWeight:'semibold'};
 
     return (
-        <Link href={to}>
+        <Link to={to}>
             <Text display="block" {...rest} {...menuItemProps}>
                 {children}
             </Text>
@@ -28,8 +30,9 @@ export const MenuLinks = () => {
                 direction={["column", "row", "row", "row"]}
                 pt={[4, 4, 0, 0]}
             >
-                <MenuItem to="/">Players</MenuItem>
-                <MenuItem to="/how">Stats</MenuItem>
+                <MenuItem to="/players">Players</MenuItem>
+                <MenuItem to="/stats    ">Stats</MenuItem>
+                <Button leftIcon={<FcGoogle />} colorScheme='twitter' variant='outline'>Log in with Google</Button>
             </Stack>
 
         </Box>

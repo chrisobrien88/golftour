@@ -13,9 +13,7 @@ import {
     Button,
 } from '@chakra-ui/react';
 
-import './PlayerCard.scss'
-
-import { Label } from '../Label'
+import './PlayerCard.scss';
 
 export const PlayerCard = (props) => {
     return (

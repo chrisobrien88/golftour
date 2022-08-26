@@ -3,9 +3,6 @@ import React from 'react';
 import {
     Box,
     Text,
-    Button,
-    VStack,
-    HStack,
     ChakraProvider,
 } from '@chakra-ui/react'
 

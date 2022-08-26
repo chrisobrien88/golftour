@@ -23,12 +23,16 @@
     margin: -$border;
     /* !importanté */
     border-radius: inherit;
-    /* !importanté */
-    // background: linear-gradient(to bottom, lightblue, blue);
-    // background: hsla(208, 100%, 55%, 1);
-    background: linear-gradient(45deg, hsla(208, 100%, 55%, 1) 0%, hsla(46, 100%, 53%, 1) 100%)
-    // background: -moz-linear-gradient(45deg, hsla(208, 100%, 55%, 1) 0%, hsla(65, 14%, 83%, 1) 100%);
-    // background: -webkit-linear-gradient(45deg, hsla(208, 100%, 55%, 1) 0%, hsla(65, 14%, 83%, 1) 100%);
-    // filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#1895FF", endColorstr="#D9DACE", GradientType=1);
+    // MAKES GRADIENT BACKGROUND!
+    // background: linear-gradient(45deg, hsla(208, 100%, 55%, 1) 0%, hsla(46, 100%, 53%, 1) 100%)
+
+
+      /* !importanté */
+      // background: linear-gradient(to bottom, lightblue, blue);
+      // background: hsla(208, 100%, 55%, 1);
+
+      // background: -moz-linear-gradient(45deg, hsla(208, 100%, 55%, 1) 0%, hsla(65, 14%, 83%, 1) 100%);
+      // background: -webkit-linear-gradient(45deg, hsla(208, 100%, 55%, 1) 0%, hsla(65, 14%, 83%, 1) 100%);
+      // filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#1895FF", endColorstr="#D9DACE", GradientType=1);
   }
 }
