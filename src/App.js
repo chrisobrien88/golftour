@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import {
-  ButtonGroup,
-  Button,
   Flex,
   ChakraProvider,
   VStack,
@@ -15,6 +13,7 @@ import { teamEurope, teamUSA } from './players'
 
 // Import Components
 import { PlayerCard } from './components/PlayerCard/PlayerCard.js';
+import { NavBar } from './components/NavBar/NavBar';
 
 // Import Images
 import teamEuropePic from './images/europe.png'
@@ -33,10 +32,12 @@ export const App = () => {
 
   return (
     <ChakraProvider>
+      
       <VStack h='100vh'>
+      <NavBar/>
         {/* <Image src={teamEuropePic} alt={teamEuropePic} position='absolute' maxH='100px'/> */}
         <VStack justifyContent='center' maxW='1200px'>
-
+        
           <Flex alignItems='center' justifyContent='center' h={24} w='full'>
 
             {/* <ButtonGroup>
@@ -60,6 +61,7 @@ export const App = () => {
               src={player.profilePic}
             />))}
           </Flex>
+          
         </VStack>
       </VStack>
     </ChakraProvider>
