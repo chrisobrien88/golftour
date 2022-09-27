@@ -32,7 +32,7 @@ export const MenuLinks = () => {
             >
                 <MenuItem to="/players">Players</MenuItem>
                 <MenuItem to="/stats    ">Stats</MenuItem>
-                <Button leftIcon={<FcGoogle />} colorScheme='twitter' variant='outline'>Log in with Google</Button>
+                <Button leftIcon={<FcGoogle />} colorScheme='twitter' variant='outline'>Google login</Button>
             </Stack>
 
         </Box>
