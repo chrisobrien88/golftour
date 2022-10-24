@@ -14,9 +14,6 @@ import { NavBar } from './components/NavBar/NavBar';
 import { Players } from './scenes/Players';
 import { Stats } from './scenes/Stats';
 
-
-
-
 export const App = () => {
 
   const [firstName, setFirstName] = useState('');

@@ -25,6 +25,11 @@ const GolferInfoSchema = new mongoose.Schema ({
                 type: Boolean,
                 required: false,
                 default: true,
+        },
+        golferId: {
+                type: Number,
+                required: true,
+                default: Date.now()
         }
 });
 
